@@ -1,0 +1,64 @@
+Skip to content
+Search for:
+C program to check whether a number is divisible by 5 and 11 or not
+May 22, 2015PankajC programmingC, If else, Program
+
+Write a C program to check whether a number is divisible by 5 and 11 or not using if else. How to check divisibility of any number in C programming. C program to enter any number and check whether it is divisible by 5 and 11 or not. Logic to check divisibility of a number in C program.
+
+Example
+Input
+Input number: 55
+Output
+
+Number is divisible by 5 and 11
+
+Required knowledge
+Basic C programming, Arithmetic operators, Relational operators, Logical operators, If else
+
+Logic to check divisibility of a number
+
+A number is exactly divisible by some other number if it gives 0 as remainder. To check if a number is exactly divisible by some number we need to test if it leaves 0 as remainder or not.
+
+C supports a modulo operator %, that evaluates remainder on division of two operands. You can use this to check if a number is exactly divisible by some number or not. For example - if(8 % 2), if the given expression evaluates 0, then 8 is exactly divisible by 2.
+
+Step by step descriptive logic to check whether a number is divisible by 5 and 11 or not.
+
+Input a number from user. Store it in some variable say num.
+To check divisibility with 5, check if(num % 5 == 0) then num is divisible by 5.
+To check divisibility with 11, check if(num % 11 == 0) then num is divisible by 11.
+Now combine the above two conditions using logical AND operator &&. To check divisibility with 5 and 11 both, check if((num % 5 == 0) && (num % 11 == 0)), then number is divisible by both 5 and 11.
+Let us implement the logic.
+
+Program to check divisibility of a number
+
+/**
+ * C program to check divisibility of any number
+ */
+
+#include <stdio.h>
+
+int main()
+{
+    int num;
+
+    /* Input number from user */
+    printf("Enter any number: ");
+    scanf("%d", &num);
+
+
+    /*
+     * If  num modulo division 5 is 0 
+     * and num modulo division 11 is 0 then
+     * the number is divisible by 5 and 11 both
+     */
+    if((num % 5 == 0) && (num % 11 == 0))
+    {
+        printf("Number is divisible by 5 and 11");
+    }
+    else
+    {
+        printf("Number is not divisible by 5 and 11");
+    }
+
+    return 0;
+}
